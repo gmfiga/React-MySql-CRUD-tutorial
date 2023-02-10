@@ -11,7 +11,7 @@ const Books = () => {
     const fetchAllBooks = async () => {
       try {
         const response = await axios.get(
-          "http://https://bespoke-dusk-25f037.netlify.app/books"
+          "https://bespoke-dusk-25f037.netlify.app/books"
         );
         setBooks(response.data);
         console.log(response);
