@@ -24,9 +24,7 @@ const Books = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(
-        "https://bespoke-dusk-25f037.netlify.app//books/" + id
-      );
+      await axios.delete("https://bespoke-dusk-25f037.netlify.app/books/" + id);
       window.location.reload();
     } catch (err) {
       console.log(err);
