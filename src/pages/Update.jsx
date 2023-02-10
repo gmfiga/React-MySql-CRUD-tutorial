@@ -23,7 +23,10 @@ const Update = () => {
     e.preventDefault();
 
     try {
-      await axios.put("http://localhost:8800/books/" + bookId, book);
+      await axios.put(
+        "https://bespoke-dusk-25f037.netlify.app/books/" + bookId,
+        book
+      );
       navigate("/");
     } catch (err) {
       console.log(err);
