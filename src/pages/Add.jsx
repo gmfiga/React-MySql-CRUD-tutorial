@@ -20,7 +20,7 @@ const Add = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8800/books", book);
+      await axios.post("https://bespoke-dusk-25f037.netlify.app//books", book);
       navigate("/");
     } catch (err) {
       console.log(err);
