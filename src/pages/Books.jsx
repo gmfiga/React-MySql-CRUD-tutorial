@@ -25,7 +25,7 @@ const Books = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        "https://crud-tutorial-server.onrender.com/books" + id
+        "https://crud-tutorial-server.onrender.com/books/" + id
       );
       window.location.reload();
     } catch (err) {
