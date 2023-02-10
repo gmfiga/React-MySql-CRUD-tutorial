@@ -11,7 +11,7 @@ const Books = () => {
     const fetchAllBooks = async () => {
       try {
         const response = await axios.get(
-          "https://bespoke-dusk-25f037.netlify.app/books"
+          "https://crud-tutorial-server.onrender.com/books"
         );
         setBooks(response.data);
         console.log(response);
@@ -24,7 +24,9 @@ const Books = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete("https://bespoke-dusk-25f037.netlify.app/books" + id);
+      await axios.delete(
+        "https://crud-tutorial-server.onrender.com/books" + id
+      );
       window.location.reload();
     } catch (err) {
       console.log(err);

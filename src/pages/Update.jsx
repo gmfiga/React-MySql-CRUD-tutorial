@@ -24,7 +24,7 @@ const Update = () => {
 
     try {
       await axios.put(
-        "https://bespoke-dusk-25f037.netlify.app/books/" + bookId,
+        "https://crud-tutorial-server.onrender.com/books" + bookId,
         book
       );
       navigate("/");
