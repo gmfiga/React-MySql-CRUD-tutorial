@@ -10,9 +10,7 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const response = await axios.get(
-          "https://bespoke-dusk-25f037.netlify.app/books"
-        );
+        const response = await axios.get("http://localhost:8800/books");
         setBooks(response.data);
         console.log(response);
       } catch (err) {
@@ -24,7 +22,7 @@ const Books = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete("https://bespoke-dusk-25f037.netlify.app/books/" + id);
+      await axios.delete("http://localhost:8800/books" + id);
       window.location.reload();
     } catch (err) {
       console.log(err);
